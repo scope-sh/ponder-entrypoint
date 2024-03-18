@@ -1,0 +1,9 @@
+# Dependencies
+/node_modules
+
+# Env files
+.env*.local
+
+# Ponder
+/generated/
+/.ponder/
