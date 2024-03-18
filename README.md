@@ -15,7 +15,7 @@ To learn more about deploying a Ponder instance, please consult their [docs](htt
 
 - Supports both EntryPoint 0.6 and 0.7
 - Works on 30+ EVM chains
-- Conditional (only indexes the chain you're providing the RPC URL for)
+- Conditional (only indexes the chains you're providing the RPC URL for)
 
 ## Roadmap
 
