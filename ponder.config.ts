@@ -9,6 +9,10 @@ const ENTRYPOINT_0_7_ADDRESS = '0x0000000071727de22e5e9d8baf0edac6f37da032';
 
 export default createConfig({
   networks: {
+    sepolia: {
+      chainId: 11155111,
+      transport: http(process.env.PONDER_RPC_URL_11155111),
+    },
     polygonMumbai: {
       chainId: 80001,
       transport: http(process.env.PONDER_RPC_URL_80001),
@@ -18,14 +22,26 @@ export default createConfig({
     'EntryPoint0.6': {
       abi: entryPoint06Abi,
       address: ENTRYPOINT_0_6_ADDRESS,
-      network: 'polygonMumbai',
-      startBlock: 34166156,
+      network: {
+        sepolia: {
+          startBlock: 3257815,
+        },
+        polygonMumbai: {
+          startBlock: 34166156,
+        },
+      },
     },
     'EntryPoint0.7': {
       abi: entryPoint07Abi,
       address: ENTRYPOINT_0_7_ADDRESS,
-      network: 'polygonMumbai',
-      startBlock: 46345465,
+      network: {
+        sepolia: {
+          startBlock: 5328753,
+        },
+        polygonMumbai: {
+          startBlock: 46345465,
+        },
+      },
     },
   },
 });
