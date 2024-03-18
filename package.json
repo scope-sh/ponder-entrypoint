@@ -1,7 +1,23 @@
 {
-  "name": "scope-ponder",
-  "version": "0.0.1",
-  "private": true,
+  "name": "ponder-entrypoint",
+  "version": "1.0.0",
+  "description": "Ponder backend for EntryPoint contracts",
+  "author": {
+    "name": "Timur Badretdinov",
+    "github": "https://github.com/Destiner"
+  },
+  "keywords": [
+    "ponder",
+    "ethereum",
+    "evm",
+    "entrypoint",
+    "account-abstraction"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/scope-sh/ponder-entrypoint.git"
+  },
   "type": "module",
   "scripts": {
     "dev": "ponder dev",
