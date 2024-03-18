@@ -1,4 +1,4 @@
-import { createSchema } from "@ponder/core";
+import { createSchema } from '@ponder/core';
 
 export default createSchema((p) => ({
   UserOp: p.createTable({
@@ -12,6 +12,17 @@ export default createSchema((p) => ({
     paymaster: p.hex(),
     sender: p.hex(),
     success: p.boolean(),
+    entryPoint: p.hex(),
+  }),
+  AccountDeployed: p.createTable({
+    id: p.string(),
+    hash: p.hex(),
+    chainId: p.int(),
+    txHash: p.hex(),
+    factory: p.hex(),
+    paymaster: p.hex(),
+    sender: p.hex(),
+    userOpHash: p.hex(),
     entryPoint: p.hex(),
   }),
 }));

@@ -20,4 +20,20 @@ if (isIndexing0_6) {
       },
     });
   });
+
+  ponder.on('EntryPoint0.6:AccountDeployed', async ({ event, context }) => {
+    await context.db.AccountDeployed.create({
+      id: `${context.network.chainId}-${event.args.userOpHash}`,
+      data: {
+        hash: event.transaction.hash,
+        chainId: context.network.chainId,
+        txHash: event.transaction.hash,
+        factory: event.args.factory,
+        paymaster: event.args.paymaster,
+        sender: event.args.sender,
+        userOpHash: event.args.userOpHash,
+        entryPoint: event.log.address,
+      },
+    });
+  });
 }
