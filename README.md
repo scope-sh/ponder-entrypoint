@@ -9,7 +9,7 @@ bun i
 bun run dev
 ```
 
-To learn more about deploying a Ponder instance, please consult their [docs](https://ponder.sh/docs).
+To learn more about deploying a Ponder instance, please consult their [docs](https://ponder.sh/docs/production/deploy).
 
 ## Features
 
